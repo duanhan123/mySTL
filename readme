@@ -1,1 +1,10 @@
-mySTL
+mySTL学习笔记
+   
+return static_cast<T*>(::operator new(n * sizeof(T)));
+在C++中，operator new和new operator还是很有区别。new operator是c++内建的，无法改变其行为；而operator new 是可以根据自己的内存分配策略去重载的。
+new分配内存并调用构造函数，operator new 仅分配内存
+
+static_cast、dynamic_cast、const_cast和reinterpret_cast四种类型转换运算符
+分别相关类型向上转换，程序运行时转换，const转非const，二进制转换（底层，风险高）
+
+operator double() const { return m_real; }//《more effective C++》ITEM5讲到“隐式类型转换运算符”
